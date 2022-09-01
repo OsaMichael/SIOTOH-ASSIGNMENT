@@ -1,0 +1,50 @@
+﻿
+@model IEnumerable<SiotohBlog.ViewModel.BlogModel>
+
+@{
+    ViewBag.Title = "";
+}
+<br />
+<br />
+<br />
+<div>
+    <b class="blog-title" style="color:darkolivegreen; font-size:large;">Latest Articles </b>
+</div>
+<br />
+
+    <p class="btn-default pull-right">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+        {
+                @Html.RadioButton("searchBy", "PublicationDate", true)<text><small>Publication Date</small></text>
+               @Html.TextBox("search") <input type="submit" value="Search" />
+        }
+    </p>
+
+<div class="row">
+    <table class="table">
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td class="blog-content">
+                <b class="blog-title" style="color:brown; font-size:large;">@Html.DisplayFor(modelItem => item.Title)</b>
+                <p>
+                    @Html.DisplayFor(modelItem => item.ShortDescription)
+                </p>
+            <a href="@Url.Action("ReadMore","Blog" , new { id = item.Id})" class="breadcrumb">Read more...</a>
+            </td>
+        </tr>
+            @*<tr>
+                <td><a href="@Url.Action("ReadMore","Blog" , new { id = item.Id})" class="breadcrumb">Read more</a></td>
+                <td><a href="~/Blog/@item.BUrl">Read more</a></td>
+            </tr>*@
+            <tr>
+                <td>
+                    <b style="color:skyblue; font-size:small;"> Post: @item.PublicationDate.ToString("dd/MM/yyyy")</b>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

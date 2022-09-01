@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SiotohBlog.ViewModel.BlogModel>
+
+@{
+    ViewBag.Title = "";
+}
+
+<br />
+<br />
+
+@if(User.Identity.IsAuthenticated)
+{ 
+<h2>Upload New Blog</h2>
+<p>
+    @Html.ActionLink("Create New", "UploadBlog")
+</p>
+
+<div class="row">
+    <table class="table">
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="blog-content">
+                    <b class="blog-title" style="color:brown; font-size:large;">@Html.DisplayFor(modelItem => item.Title)</b>
+                    <p>
+                        @Html.DisplayFor(modelItem => item.ShortDescription)
+                    </p>
+                    <a href="@Url.Action("ReadMore","Blog" , new { id = item.Id})" class="breadcrumb">Read more...</a>
+                </td>
+            </tr>
+            @*<tr>
+                    <td><a href="@Url.Action("ReadMore","Blog" , new { id = item.Id})" class="breadcrumb">Read more</a></td>
+                    <td><a href="~/Blog/@item.BUrl">Read more</a></td>
+                </tr>*@
+            <tr>
+                <td>
+                    <b style="color:skyblue; font-size:small;"> Post: @item.PublicationDate.ToString("MM/dd/yyyy")</b>
+                </td>
+            </tr>
+        }
+
+    </table>
+ </div>
+}
+

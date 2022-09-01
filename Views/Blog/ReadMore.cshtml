@@ -1,0 +1,90 @@
+﻿@model SiotohBlog.ViewModel.BlogModel
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2></h2>
+<br />
+<br />
+@*<br />
+    <div class="col-0 clo-sm col-md-12" >
+        <div class="jumbotron">
+            <h4> <span>@Model.Title</span></h4>
+        </div>
+    </div>*@
+<h4 class="text-center"><b><span>@Model.Title</span></b></h4>
+<div class="text-justify">
+    <div class="main" role="main">
+        <div id="content" class="content full">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="sermon-media clearfix">
+
+                            <div class="sermon-media-right">
+                                <div class="sermon-media-content">
+
+                                    <div class="latest-sermon-content sermon-tabs" id="self-audio">
+                                        <blockquote>
+                                            <p>@Html.Raw(Model.Description)</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="social-share-bar">
+
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a href="@Url.Action("RgisteredUser","Blog")" class="basic-link backward">Previous</a>
+            }
+            else
+            {
+                <a href="@Url.Action("Index","Home")" class="basic-link backward">Previous</a>
+            }
+
+        </div>
+    </div>
+</div>
+
+
+@*<div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PublicationDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PublicationDate)
+            </dd>
+
+
+        </dl>
+    </div>*@
+
