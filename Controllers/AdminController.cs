@@ -11,7 +11,6 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 using static SiotohBlog.Controllers.Common.Enum;
 
@@ -62,15 +61,11 @@ namespace SiotohBlog.Controllers
         {
             if (ModelState.IsValid)
             {
-                //  IdentityResult result = await roleManager.CreateAsync(name);
                 var role = new IdentityRole
                 {
                     Name = name
                 };
-                // var mappedUser = _mapper.Map<Role>(name);
                 IdentityResult result = await _roleManager.CreateAsync(role);
-
-                //  RoleModel roles = _mapper.Map<RoleModel>(result);
 
                 if (result.Succeeded)
                 {
@@ -86,8 +81,7 @@ namespace SiotohBlog.Controllers
                 {
                     // Errors(result);
                 }
-                // TempData["Message"] = result;
-                //return View(roles);
+
             }
             return View(name);
         }

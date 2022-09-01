@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siotoh.Blog", "Siotoh.Blog.csproj", "{B06B1965-64E5-4265-BFAA-ACF56826B173}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siotoh.Tests", "..\Siotoh.Test\Siotoh.Tests.csproj", "{8B67615F-C453-4F21-ADC6-658436A7EB5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siotoh.Test", "..\Siotoh.Test\Siotoh.Test.csproj", "{87E5DD3E-869B-4450-BD3B-FBCB12CDA120}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B06B1965-64E5-4265-BFAA-ACF56826B173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B06B1965-64E5-4265-BFAA-ACF56826B173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B06B1965-64E5-4265-BFAA-ACF56826B173}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B67615F-C453-4F21-ADC6-658436A7EB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B67615F-C453-4F21-ADC6-658436A7EB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B67615F-C453-4F21-ADC6-658436A7EB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B67615F-C453-4F21-ADC6-658436A7EB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87E5DD3E-869B-4450-BD3B-FBCB12CDA120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87E5DD3E-869B-4450-BD3B-FBCB12CDA120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87E5DD3E-869B-4450-BD3B-FBCB12CDA120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87E5DD3E-869B-4450-BD3B-FBCB12CDA120}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

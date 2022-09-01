@@ -1,20 +1,10 @@
-﻿using AutoMapper;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Microsoft.AspNet.Identity;
 using Newtonsoft.Json;
-using SiotohBlog.Interface;
-using SiotohBlog.Models;
 using SiotohBlog.Repository;
 using SiotohBlog.ViewModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Net.Http;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 using static SiotohBlog.Controllers.Common.Enum;
 
@@ -32,7 +22,6 @@ namespace SiotohBlog.Controllers
         // GET: Blog
         public ActionResult Index()
         {
-            //var list = _blog.AllNews().ToList();
             return View();
         }
         public ActionResult RgisteredUser()
@@ -67,7 +56,7 @@ namespace SiotohBlog.Controllers
 
                 return RedirectToAction("UploadBlog");
             }
-            return View();
+            return View(blog);
         }
 
         public ActionResult ReadMore(int id)
